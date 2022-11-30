@@ -49,6 +49,9 @@ while not is_game_over():
 
     if guess in full_list:
         guessed += 1
+        if guess in guesses:
+            print("You have used this word")
+            continue
         guesses.append(guess)
         if guessed == WORDS_TO_WIN:
             congratulate_user()
